@@ -1,7 +1,8 @@
 Two ways to install d3 ->
 1) type "npm install d3"
-   -- This will install the recent version of d3
-   -- To install a specific version type "npm 
+   -- This will install the latest version of d3
+   -- To install a specific version type "npm install d3@5.16.0" 
+   -- To find the available versions visit - https://github.com/d3/d3/releases
 2) In package.json add ("d3": "^5.16.0") as a dependency
    and then type "npm install" in command line - For mac and linux users, you might type sudo npm install in some className
 -------------------------------
