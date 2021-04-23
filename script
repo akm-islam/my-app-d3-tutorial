@@ -6,15 +6,16 @@ export default class App extends Component {
     this.state = {myvar: 1};
   }
   componentDidMount(){
-    console.log("Component Mounted")
+    console.log(" componentDidMount called")
   }
   componentDidUpdate(){
-    console.log("Component Updated")
+    console.log("componentDidUpdate called")
   }
   onclickHandler=()=>{
     this.setState({myvar:this.state.myvar+1})
   }
   render() {
+     console.log("Rendering called")
     return (
       <div className="App">
         <p>{this.state.myvar}</p>
