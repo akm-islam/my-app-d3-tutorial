@@ -7,14 +7,12 @@ export default class App extends Component {
     this.state = { myvar: 1 };
   }
   componentDidMount() {
-    //-----------------------------------------------------------------------select and selectAll
-    /*
-      d3.select selects the first matching element whilst d3.selectAll selects all matching elements. 
-      Each function takes a single argument which specifies the selector string.
-    */
-    //console.log(d3.select('circle')) // Selects only one circle. If there are multiple circles, the first one is returend
-    //console.log(d3.selectAll('circle')) // Selects all circles
+    //-----------------------------------------------------------------------Filtering selection
+    //console.log(d3.selectAll('circle').filter(d3.matcher('.mycircle')).style('fill',"orange"))
 
+    //-----------------------------------------------------------------------Multiple selection
+    //console.log(d3.selectAll('.circle1,.mycircle4').style('fill',"orange"))
+    console.log(d3.selectAll('#circle2,.mycircle4').style('fill',"orange"))
 
   }
   componentDidUpdate() {
@@ -28,9 +26,9 @@ export default class App extends Component {
       <svg width="760" height="140">
         <circle r="40" cx="120" cy="50" className="circle1" />
         <circle r="40" cx="240" id="circle2" cy="50" />
-        <circle r="40" cx="360" cy="50" className="mycircle"/>
-        <circle r="40" cx="480" cy="50" className="mycircle"/>
-        <circle r="40" cx="600" cy="50" className="mycircle"/>
+        <circle r="40" cx="360" cy="50" className="mycircle" />
+        <circle r="40" cx="480" cy="50" className="mycircle4" />
+        <circle r="40" cx="600" cy="50" className="mycircle" />
       </svg>
     )
   }
