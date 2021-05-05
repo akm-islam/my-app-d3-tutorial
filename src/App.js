@@ -25,7 +25,7 @@ export default class App extends Component {
       You can also use css selector for advance selection and filtering.
     */
     //d3.select('.circle1').style('fill', 'orange')
-    //d3.selectAll('#circle2').style('fill', 'orange')
+    d3.selectAll('#circle2').style('fill', 'orange')
 
   }
   componentDidUpdate() {
@@ -39,7 +39,7 @@ export default class App extends Component {
       <svg width="760" height="140">
         <circle r="40" cx="120" cy="50" className="circle1" />
         <circle r="40" cx="240" id="circle2" cy="50" />
-        <circle r="40" cx="360" cy="50" />
+        <circle r="40" cx="360" id="circle2" cy="50" />
         <circle r="40" cx="480" cy="50" />
         <circle r="40" cx="600" cy="50" />
       </svg>
