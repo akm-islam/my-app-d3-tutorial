@@ -7,12 +7,14 @@ export default class App extends Component {
     this.state = { myvar: 1 };
   }
   componentDidMount() {
+
     //-----------------------------------------------------------------------Filtering selection
-    //console.log(d3.selectAll('circle').filter(d3.matcher('.mycircle')).style('fill',"orange"))
+    //d3.selectAll('#myid').filter(d3.matcher('text')).style('fill',"orange")
+    //d3.selectAll('circle').filter(d3.matcher('.mycircle')).style('fill',"orange")
 
     //-----------------------------------------------------------------------Multiple selection
-    //console.log(d3.selectAll('.circle1,.mycircle4').style('fill',"orange"))
-    console.log(d3.selectAll('#circle2,.mycircle4').style('fill',"orange"))
+    //d3.selectAll('.circle1,.mycircle4').style('fill',"orange")
+    //d3.selectAll('#circle2,.mycircle4').style('fill',"orange")
 
   }
   componentDidUpdate() {
@@ -23,12 +25,14 @@ export default class App extends Component {
   }
   render() {
     return (
-      <svg width="760" height="140">
-        <circle r="40" cx="120" cy="50" className="circle1" />
-        <circle r="40" cx="240" id="circle2" cy="50" />
-        <circle r="40" cx="360" cy="50" className="mycircle" />
-        <circle r="40" cx="480" cy="50" className="mycircle4" />
-        <circle r="40" cx="600" cy="50" className="mycircle" />
+      <svg width="760" height="500">
+        <circle id="myid" r="40" cx="120" cy="50" className="circle1" />
+        <circle id="myid" r="40" cx="240" cy="50" />
+        <circle id="myid" r="40" cx="360" cy="50" className="mycircle" />
+        <circle id="myid" r="40" cx="480" cy="50" className="mycircle4" />
+        <circle id="myid" r="40" cx="600" cy="50" className="mycircle" />
+        <text id="myid" x="110" y="150">Text1</text>
+        <text id="myid" x="230" y="150">Text2</text>
       </svg>
     )
   }
