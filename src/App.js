@@ -8,13 +8,21 @@ export default class App extends Component {
   }
   componentDidMount() {
 
-    //-----------------------------------------------------------------------Filtering selection
-    //d3.selectAll('#myid').filter(d3.matcher('circle')).style('fill',"orange")
-    //d3.selectAll('circle').filter(d3.matcher('#myid2')).style('fill',"orange")
+    //-----------------------------------------------------------------------Data Joins
+    var myData = [10, 40, 20, 30, 50];
 
-    //-----------------------------------------------------------------------Multiple selection
-    //d3.selectAll('.circle1,.mycircle4').style('fill',"orange")
-    d3.selectAll('#circle2,.mycircle4').style('fill',"orange")
+    var s = d3.selectAll('circle');
+
+    // Do the data join
+    s.data(myData);
+
+    // Modify the selected elements
+    s.attr('r', function (d) {
+      return d;
+    })
+      .attr('cx', function (d, i) {
+        return i * 120 ;
+      });
 
   }
   componentDidUpdate() {
@@ -31,8 +39,6 @@ export default class App extends Component {
         <circle id="myid" r="40" cx="360" cy="50" className="mycircle" />
         <circle id="myid" r="40" cx="480" cy="50" className="mycircle4" />
         <circle id="myid" r="40" cx="600" cy="50" className="mycircle" />
-        <text id="myid" x="110" y="150">Text1</text>
-        <text id="myid" x="230" y="150">Text2</text>
       </svg>
     )
   }
